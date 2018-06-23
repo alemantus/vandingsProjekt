@@ -28,10 +28,8 @@ void setup() {
 
 
   digitalWrite(wakePin, HIGH);
-  delay(100);
-  digitalWrite(wakePin, LOW);
-  delay(500); //give the slave some time to boot
 
+  
 /*  
   while(Serial.read()!="hi"){
     error++
@@ -49,7 +47,8 @@ void setup() {
       data[i] = Serial.read();
     }
   }
-
+  digitalWrite(wakePin, LOW);
+  delay(100); 
 
   //data[0] = 25; //debug
   //data[1] = 22; //debug
@@ -69,6 +68,8 @@ void setup() {
   client.publish("data1", dataOut[0]);
   client.publish("data2", dataOut[1]);
   //client.loop();
+ 
+
   ESP.deepSleep(sleepTimeS * 1000000); 
 }
 
