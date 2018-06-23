@@ -26,12 +26,12 @@ void setup() {
   Serial.begin(115200);
   pinMode(wakePin, OUTPUT);
 
-/*
+
   digitalWrite(wakePin, HIGH);
   delay(100);
   digitalWrite(wakePin, LOW);
   delay(500); //give the slave some time to boot
-*/
+
 /*  
   while(Serial.read()!="hi"){
     error++
@@ -43,16 +43,16 @@ void setup() {
   }
 */
   delay(50); // buffer between setup and the main program.
-/*
+
   for(int i = 0; i < numberSensor; i++){
     while(Serial.read()!='\n'){
       data[i] = Serial.read();
     }
   }
-*/
 
-  data[0] = 25;
-  data[1] = 2;
+
+  //data[0] = 25; //debug
+  //data[1] = 22; //debug
   //connect to wifi and mqtt server
   setup_wifi();
   client.setServer(mqtt_server, 1883); 
