@@ -14,7 +14,7 @@ void setup()
     // Configure wake up pin as input.
     // This will consumes few uA of current.
     pinMode(wakeUpPin, INPUT);   
-    
+    Serial.begin(115200);
 }
 
 void loop() 
@@ -30,11 +30,13 @@ void loop()
     detachInterrupt(0); 
 
     
-    data[0] = analogRead(A0);
-    data[1] = analogRead(A1);
+    //data[0] = analogRead(A0);
+    //data[1] = analogRead(A1);
 
+    data[0] = 11;
+    data[1] = 15;
     delay(200);
-    Serial.println(Data[0]);
+    Serial.println(data[0]);
     delay(10);
-    Serial.println(Data[1]);
+    Serial.println(data[1]);
 }
