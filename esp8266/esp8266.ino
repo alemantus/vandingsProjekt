@@ -32,7 +32,7 @@ const char* ssid = "Kvinderegensen";
 const char* password = "qralumne";
 const char* mqtt_server = "87.63.168.126";
 
-const char* serverUser = "admin";
+const char* serverUser = "admin";   
 const char* serverPassword = "Strandparken57";
 
 const char* dataOut[2];
